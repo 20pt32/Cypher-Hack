@@ -9,8 +9,11 @@ import {
 } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
-import {BIP39} from 'bip39';
-import {generateMnemonic,mnemonicToSeed} from 'bip39';
+//import BIP39 from 'bip39';
+const bip39 = require('bip39');
+const mnemonic = bip39.generateMnemonic()
+// const generateMnemonic = BIP39.generateMnemonic;
+// const mnemonicToSeed = BIP39.mnemonicToSeed;
 import ethUtil from 'ethereumjs-util';
 
 const styles = StyleSheet.create({
